@@ -1,0 +1,36 @@
+Conveyor is a stack-based two-dimensional esoteric language. It consists of a processor that is
+going around on conveyor belts. This program is licensed under the DO WHATEVER YOU 
+WANT, I DON'T CARE AS LONG AS YOU GIVE ME SOME F***ING CREDITS license.
+
+Here's a basic tutorial about Conveyor:
+
+
+>,<,#,=,T: Conveyor belts.
+>: Start moving to the right
+<: Start moving to the left
+=: Continue to move in the direction that it was last in.
+#: Go down if top element is 0
+T: Skip next command and continue moving in the same direction as before.
+
+": Start/stop parsing string
+0-9: Put that number on the stack
+F: A furnace. the program ends when the executor gets here.
+.: Print the ascii-value of the top stack element. The element gets removed from the stack.
+,: Same as ., but instead of printing ascii, we print the actual number.
+:: Duplicate top stack element.
+P: Pop top element.
+^: Elevator. Go one char upwards.
++,-,*,/: Pop two numbers, a and b and preform the selected action. (Example program: 25*5/, = (2 * 5) / 5)
+x; Pop two values, a and b, and push a^b.
+?: Pop a value and push a random number between 0 (inclusive) and the popped value (exclusive).
+G: Pop a value, n, and push the n'th value from the stack.
+\: Swap the top two values.
+@: Swap the top three values.
+(: Decrement the top value.
+): Increment the top value.
+S: Pop a value, sleep for that amount of milliseconds.
+p: Pop three values, c, y and x. Replace the character at x, y in the program with the ascii value of c.
+a: Pop two values, y and x and push the ascii value in the program at x, y to the stack.
+i: If the buffer is empty, read a line from STDIN and push it to the buffer. After that it moves the last char on the buffer to the stack.
+I: The same as i except it moves the first character from the buffer the stack. 
+

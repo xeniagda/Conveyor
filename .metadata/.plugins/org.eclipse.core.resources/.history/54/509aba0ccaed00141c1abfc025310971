@@ -17,7 +17,7 @@ public class Main {
 					.println("Usage: java -jar file [-f] <Program> [-i] <Default input buffer> [-d] (debug true/false)");
 			System.exit(0);
 		}
-		if (!(args.get("d") instanceof Boolean))
+		if (!args.get("d") instanceof Boolean)
 			args.put("d", false);
 
 		BufferedReader br = new BufferedReader(new FileReader(new File(args

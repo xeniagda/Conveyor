@@ -12,14 +12,8 @@ public class Main {
 	public static void main(String[] ar) throws Exception {
 
 		HashMap<String, Object> args = ArgumentParser.parseArgs(ar, "fid");
-		if (ar.length == 0) {
-			System.out
-					.println("Usage: java -jar file [-f] <Program> [-i] <Default input buffer> [-d] (debug true/false)");
-			System.exit(0);
-		}
-		if (!(args.get("d") instanceof Boolean))
-			args.put("d", false);
-
+		
+		
 		BufferedReader br = new BufferedReader(new FileReader(new File(args
 				.get("f").toString())));
 		ArrayList<String> lines = new ArrayList<String>();
@@ -215,7 +209,7 @@ public class Main {
 			if (currentDir != 4)
 				tryDir = currentDir;
 
-			if ((boolean) args.get("d")) {
+			if ((boolean)args.get("d")) {
 				Thread.sleep(100);
 				System.out.println();
 				System.out.println("Stack:" + stack);
