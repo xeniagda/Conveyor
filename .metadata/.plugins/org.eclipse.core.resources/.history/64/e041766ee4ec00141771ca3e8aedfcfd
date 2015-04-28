@@ -1,0 +1,23 @@
+"dlroH dlroW"
+>=============>:.
+              ^#=
+              ^F
+                T<
+Is a hello world program in Conveyor.
+
+O: The executor
+
+>,<,#,=,T: Ground.
+>: Move to the right
+<: Move to the left
+=: Continue to move in the direction that it was last in.
+#: Pop top element. Go down if element is 0
+T: Skip next command and continue moving in the same direction as before.
+
+": Start/stop parsing string
+0-9: Put that number on the stack
+F: A furnace. the program ends when the executor gets here.
+.: Print the ascii-value of the top stack element. The element gets removed from the stack.
+:: Duplicate top stack element.
+P: Pop top element.
+

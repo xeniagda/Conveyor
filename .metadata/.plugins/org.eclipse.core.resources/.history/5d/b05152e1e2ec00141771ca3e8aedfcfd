@@ -1,0 +1,18 @@
+O"Hello World"
+>============
+           F.
+   =========#<
+
+Is a hello world program in Conveyor.
+
+O: The executor
+
+>,<,#,=,T: Ground.
+>: Move to the right
+<: Move to the left
+=: Continue to move in the direction that it was last in.
+#: Change direction if top stack element is 0
+
+": Start/stop parsing string
+0-9: Put that number on the stack
+F: A furnace. the program ends when the executor gets here.
